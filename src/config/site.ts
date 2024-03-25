@@ -11,6 +11,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/jairjunior28/",
+    github: "https://github.com/jairjunior28/Jrsoftwork-Site-Company",
   },
 }
