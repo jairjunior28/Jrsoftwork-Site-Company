@@ -8,26 +8,31 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import PageHeader from './components/pageHeader'
-import { About } from './components/About'
+import { About } from '@/components/About'
+import { Home } from '@/components/home'
 const router = createBrowserRouter([
   {
-    path: "/",
-    element:<Dashboard/>,
+    path: "*",
+    element: <>404</>
   },
   {
-    path: "/home",
-    element: <>ola mundo</>
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
   {
     path: "/about",
-    element: <About/>
+    element: <About />
   }
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
 
   </React.StrictMode>,
 )
