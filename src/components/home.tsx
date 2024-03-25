@@ -54,7 +54,12 @@ export function Home() {
     <div className="flex min-h-screen w-full flex-col">
       <PageHeader />
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-        <Carousel orientation="vertical" >
+        <Carousel 
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+      >
           <CarouselContent className="-ml-2 md:-ml-4">
             <CarouselItem className="pl-2 md:pl-4" >
               <img src={Carousel1} />

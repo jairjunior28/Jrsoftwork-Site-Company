@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import Logo from '@/assets/img/logo1.jpg'
 
 interface MainNavProps {
   items?: NavItem[]
 }
-
 export default function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link to="/" className="flex items-center space-x-2">
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <img src={Logo}/>
+        {/*<span className="inline-block font-bold">{siteConfig.name}</span>*/}
       </Link>
       {items?.length ? (
         <nav className="flex gap-6">
